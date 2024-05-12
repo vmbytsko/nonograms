@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+    <title> Создать свой кроссворд </title>
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+	<script src="js/create-crsw.js"></script>
+	<style>
+	h5 { padding-left: 1vw; }
+	@font-face {
+      font-family:PageNameFont; /* Гарнитура шрифта */
+      src: url(fonts/15324.otf); /* Путь к файлу со шрифтом */
+    }
+	table {
+	  border-collapse: collapse;
+	}
+	td {
+	  border-spacing: none;
+	  height: 25px;
+	  width: 21px;
+	  font-size: 16px;
+	  text-align: center;
+	  vertical-align: middle;
+	}
+	td.field, td.checked {
+	  border: 2px solid gray;
+	  background: white;
+	}
+	td.cross {
+	  background-image: url(imgs/cross.png);
+	  background-size: contain;
+	  background-repeat-y: no-repeat;
+	}
+	.crsw-button {
+	  background: green;
+	  color: white;
+	  border: none;
+	  padding: 1.5vw;
+	  border-radius: 5px;
+	  outline: none;
+	  display: inline-block;
+	}
+	.color-choice {
+	  border: 1px dashed gray;
+	  border-radius: 5px;
+	  float: left;
+	  height: 30px;
+	  width: 30px;
+	  margin: 2px 2px 0 2px;
+	}
+	#color-choice {
+	  border-radius: 5px;
+	  border: none;
+	  outline: none;
+	  padding: 0.5vw;
+	  display: inline-block;
+	  margin-top: 5px;
+	}
+	#primary-color {
+	  box-shadow: 0 0 3px 2px cornflowerblue;
+	}
+	#alerts, #alerts-view {
+	  position: fixed;
+	  margin-left: auto;
+	  margin-right: auto;
+	  position: fixed;
+	  font-size: 17px;
+	  color: white;
+	  z-index: 3;
+	  text-align: center;
+	  width: 100%;
+	  transition: 0.5s;
+	}
+	#alerts {top: -20%; opacity: 0;}
+	#alerts-view {top: 0; opacity: 1;}
+	#alerts > p, #alerts-view > p {
+	  background: white;
+	  width: auto;
+	  display: inline-block;
+	  padding: 15px;
+	  color: black;
+	  font-size: 19px;
+	  margin-top: calc(35px + 3vw);
+	  border-radius: 35px;
+	  border: 1.5px dashed red;
+	  transition: 0.5s;
+	}
+	</style>
+	
+  </head>
+  <body>
+	  <div id="left-panel" class="panel-vanished">
+	    <div id="logo">       </div>
+		<a href="index.htm"> Главная </a>
+		<hr>
+		<a href="create-crsw.htm"> Составить свой кроссворд </a>
+	  </div>
+	<div id="container">
+	  <div id="pagename"> Японские кроссворды </div>
+	  <center><div id="alerts"></div></center>
+      <button id="left-panel-button" class="panel-button-vanished"> ☰ </button>
+	  <br><br><br><br>
+	  <h1>Свой японский кроссворд</h1>
+	  <h5 style="color: gray">Для правильной работы страницы лучше всего использовать компьютер. <br> Данная версия конструктора нестабильна и может вызвать ошибки в течение работы. </h5>
+	  <center>
+	   <button id="clear-field" class="crsw-button"> Очистить поле </button><br>
+	   <button id="color-choice"> Выберите цвет: <br>
+	     <div class="color-choice" id="primary-color" style="background: red;"> </div>
+	     <div class="color-choice" style="background: orange;"> </div>
+	     <div class="color-choice" style="background: yellow;"> </div>
+	     <div class="color-choice" style="background: springgreen;"> </div>
+	     <div class="color-choice" style="background: deepskyblue;"> </div>
+	     <div class="color-choice" style="background: royalblue;"> </div>
+	     <div class="color-choice" style="background: darkviolet;"> </div>
+	     <div class="color-choice" style="background: black;"> </div>
+	   </button>
+	   
+	   <br><br>
+	   Ширина: <input type="field" id="width" value="5"> </input>
+	   Высота: <input type="field" id="height" value="5"> </input>
+	   <button id="apply"> Применить </button>
+	   <br><br><table></table><br>
+	   <input type="checkbox" id="is-it-color">Данный кроссворд - цветной</input><br><br>Название: <input type="field" id="crsw-name"></input> Автор: <input type="field" id="crsw-author"></input><br><br><button id="create"> Кроссворд готов, создать! </button></center><br>
+	   <center><div id="result-box"></div></center>
+	</div>
+  </body>
+<html>

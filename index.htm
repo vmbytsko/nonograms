@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+    <title> Главная </title>
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+	<script>
+	window.onload = function(){
+	  document.getElementById("left-panel-button").onclick = function(){
+	    document.getElementById("left-panel").classList.toggle("panel-vanished");
+	    document.getElementById("left-panel-button").classList.toggle("panel-button-vanished");
+	  }
+	}
+	</script>
+	<style>
+	#welcoming {
+	  background: white;
+	  border: 1px solid cornflowerblue;
+	  padding: 10px;
+	}
+	#list {
+	  width: 100%;
+	  font-size: 25px;
+	  border-radius: 5px;
+	  text-align: left;
+	}
+	.crsw-block {
+	  display: inline-block;
+	  width: 300px;
+	  height: 300px;
+	  border: 1px solid cornflowerblue;
+	  margin-right: 10px;
+	  margin-left: 10px;
+	  margin-bottom: 20px;
+      overflow: hidden; /* clearfix */
+	  text-align: left !important;
+	  box-shadow: 0 0px 5px 3px rgba(50, 50, 50, 0.01);
+	  background: white;
+	  border-radius: 4px;
+	  position: relative;
+	}
+	.crsw-block header {
+	  border-bottom: 1px dashed cornflowerblue;
+	  padding-top: 0.7vw;
+	  padding-bottom: 0.7vw;
+	  color: green;
+	  font-size: 13px;
+	  padding-left: 5px;
+	  padding-right: 10px;
+	  margin-bottom: 5px;
+	  underline: none !important;
+	}
+	.crsw-block footer {
+	  bottom: 0;
+	  position: absolute;
+	  text-align: right;
+	  border-top: 1px dashed cornflowerblue;
+	  width: calc(100% - 2vw);
+	  padding: 1vw;
+	  left: 0;
+	  padding-left: 1vw;
+	  font-family: Helvetica;
+	  background: white;
+	  margin-top: 5px;
+	  color: black;
+	  font-size: 19px;
+	  font-family: "Arial Thin";
+	}
+	.crsw-block > center > img {
+	  height: 70%;
+	  opacity: 0.5;
+	}
+	</style>
+	
+  </head>
+  <body>
+	  <div id="left-panel">
+	    <div id="logo">
+	          
+	    </div>
+		<a href="index.htm"> Главная </a>
+		<hr>
+		<a href="create-crsw.htm"> Составить свой кроссворд </a>
+	  </div>
+	<div id="container">
+	  <div id="pagename">
+		Японские кроссворды
+	  </div>
+      <button id="left-panel-button"> ☰ </button>
+	  <br><br>
+	  <br><br>
+	  <h1>Недавно созданные кроссворды: </h1>
+	  <div id="list">
+		<center>
+		<a class="crsw-block" href="crosswords/crsw0.htm">
+		  <header> Размер: 15x15 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Утёнок"</footer>
+		</a>
+		<a class="crsw-block" href="crosswords/crsw1.htm">
+		  <header> Размер: 20x15 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Фургон"</footer>
+		</a>
+		<a class="crsw-block" href="crosswords/crsw2.htm">
+		  <header> Размер: 18x25 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Пикачу"</footer>
+		</a>
+		<a class="crsw-block" href="crosswords/crsw3.htm">
+		  <header> Размер: 15x14 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Картофель фри"</footer>
+		</a>
+		<a class="crsw-block" href="crosswords/crsw4.htm">
+		  <header> Размер: 15x15 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Инь и Ян"</footer>
+		</a>
+		<a class="crsw-block" href="crosswords/crsw5.htm">
+		  <header> Размер: 12x17 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Перри-Утконос"</footer>
+		</a>
+		<a class="crsw-block" href="crosswords/crsw6.htm">
+		  <header> Размер: 17x17 </header>
+		  <center><img src="imgs/logo.jpg"></center>
+		  <footer>Японский кроссворд "Любовь"</footer>
+		</a>
+		</center>
+	  </div>
+	</div>
+  </body>
+<html>
