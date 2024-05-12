@@ -1,11 +1,11 @@
 # Nonograms
  Website to solve and create nonograms.
 
-# Description
+## Description
 
 School project from 6th grade. Some basic HTML, CSS and JS.
 
-# How to use
+## How to use
 
 1. Clone this repo.
 2. Open `index.htm`.
